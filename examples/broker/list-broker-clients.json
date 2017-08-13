@@ -1,0 +1,29 @@
+{
+  "brokers": [{
+    "id": 100,
+    "name": "Olavo",
+    "phone": "11 99999-7777",
+    "businessAddress": "ZZZZZZZZZZZZZZZZZZ",
+    "clientsId": [1,2]
+  }],
+
+  "clients": [
+    {
+      "id": 1,
+      "name": "Lucas",
+      "phone": "11 99999-9999",
+      "cpf": "123.456.789-00",
+      "address": "Rua XXXXXXXXXXXXXXXXXXXX",
+      "brokerId": 100
+    },
+
+    {
+      "id": 2,
+      "name": "WBastos",
+      "phone": "11 99999-8888",
+      "cpf": "456.123.789-00",
+      "address": "Rua YYYYYYYYYYYYYYYYYYY",
+      "brokerId": 100
+    }
+  ]
+}

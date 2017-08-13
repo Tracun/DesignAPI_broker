@@ -1,0 +1,19 @@
+{
+  "brokers": [
+    {
+      "id": 100,
+      "name": "Olavo",
+      "phone": "11 99999-7777",
+      "businessAddress": "ZZZZZZZZZZZZZZZZZZ",
+      "clientsId": [1,2]
+    },
+
+    {
+      "id": 200,
+      "name": "JBastos",
+      "phone": "11 99999-6666",
+      "businessAddress": "WWWWWWWWWWWWWWWWW",
+      "clientsId": [3,4,5]
+    }
+  ]
+}

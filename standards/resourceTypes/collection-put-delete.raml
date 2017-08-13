@@ -1,0 +1,20 @@
+#%RAML 1.0 ResourceType
+put:
+  responses: 
+    204:
+      headers: 
+        Location:
+          example: <<resourcePathName>>/1
+      body: 
+        application/json:
+          type: <<resourcePathName|!singularize>>
+          example: <<examplesCreateResponse>>
+    400:
+    500:
+      
+
+delete:
+  responses: 
+    204:
+    400:
+    500:

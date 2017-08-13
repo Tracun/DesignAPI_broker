@@ -1,0 +1,10 @@
+{
+  "client": {
+      "id": 1,
+      "name": "Lucas",
+      "phone": "11 99999-9999",
+      "cpf": "123.456.789-00",
+      "address": "Rua XXXXXXXXXXXXXXXXXXXX",
+      "brokerId": 100
+  }
+}
