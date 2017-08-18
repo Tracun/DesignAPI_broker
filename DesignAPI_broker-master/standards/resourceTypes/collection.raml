@@ -1,0 +1,53 @@
+#%RAML 1.0 ResourceType
+get:
+  responses: 
+    200:
+      body: 
+        application/json:
+          type: <<resourcePathName>>
+          example: <<examplesListResponse>>
+    500:
+post:
+  body: 
+    application/json:
+      type: <<resourcePathName|!singularize>>
+      example: <<examplesCreateRequest>>
+
+  responses: 
+    201:
+      headers: 
+        Location:
+          example: <<resourcePathName>>/1
+      body: 
+        application/json:
+          type: <<resourcePathName|!singularize>>
+          example: <<examplesCreateResponse>>
+    404:
+      body:
+        application/json:
+          example: !include ../../examples/error/error-not-found.json
+    500:
+
+put:
+  responses: 
+    204:
+      headers: 
+        Location:
+          example: <<resourcePathName>>/1
+      body: 
+        application/json:
+          type: <<resourcePathName|!singularize>>
+          example: <<examplesCreateResponse>>
+    400:
+    500:
+      
+
+delete:
+  responses: 
+    204:
+    400:
+    500:
+      
+
+        
+      

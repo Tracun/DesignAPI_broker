@@ -1,0 +1,105 @@
+#%RAML 1.0
+baseUri: https://mocksvc.mulesoft.com/mocks/94ac282a-5376-4eb4-a7c6-3546b11324c6/mocks/944a3ff3-5af7-48ff-8d72-8d24d08ff5fe # baseUri: https://mocksvc.mulesoft.com/mocks/944a3ff3-5af7-48ff-8d72-8d24d08ff5fe # 
+title: Prova-01
+
+types:
+  client-definition:
+    type: !include definition/client.raml
+  client:
+    type: object
+    properties: 
+      client: client-definition
+      broker?: broker-definition
+
+  clients:
+    type: object
+    properties: 
+      clients: client-definition []
+      brokers?: broker-definition []
+
+  broker-definition:
+    type: !include definition/broker.raml
+  broker:
+    type: object
+    properties: 
+      broker: broker-definition
+      apartment?: apartment-definition
+
+  brokers:
+    type: object
+    properties: 
+      brokers: broker-definition []
+      apartments?: apartment-definition []
+
+  apartment-definition:
+    type: !include definition/apartment.raml
+  apartment:
+      type: object
+      properties: 
+        apartment: apartment-definition
+    
+  apartments:
+      type: object
+      properties: 
+        apartments: apartment-definition []
+
+resourceTypes: 
+  collection: !include standards/resourceTypes/collection.raml
+  collection-item: !include standards/resourceTypes/collection-item.raml
+  collection-put-delete: !include standards/resourceTypes/collection-put-delete.raml
+
+traits: 
+  filterable: !include standards/traits/filterable.raml
+
+/clients:
+  type: 
+    collection:
+      examplesCreateRequest: !include examples/client/create-client-request.json
+      examplesCreateResponse: !include examples/client/create-client-response.json
+      examplesListResponse: !include examples/client/list-clients.json
+
+  /{clientsID}:
+    type: 
+      collection-item:
+        examplesListResponse: !include examples/client/list-clients.json
+
+/brokers:
+  type: 
+    collection:
+      examplesCreateRequest: !include examples/broker/create-broker-request.json
+      examplesCreateResponse: !include examples/broker/create-broker-response.json
+      examplesListResponse: !include examples/broker/list-brokers.json
+
+  /{brokerId}:
+    type: 
+      collection-item:
+        examplesListResponse: !include examples/broker/list-brokers.json
+
+    /clients:
+      type: 
+        collection-item:
+          examplesListResponse: !include examples/broker/list-broker-clients.json
+
+    /apartments:
+      type: 
+        collection-item:
+          examplesListResponse: !include examples/broker/list-broker-apartments.json
+/apartments:
+  type: 
+    collection:
+      examplesCreateRequest: !include examples/apartment/create-apartment-request.json
+      examplesCreateResponse: !include examples/apartment/create-apartment-response.json
+      examplesListResponse: !include examples/apartment/list-apartments.json
+  get:
+    is: [filterable]
+
+  /{apartmentID}:
+    type: 
+      collection-item:
+        examplesListResponse: !include examples/apartment/list-apartments.json
+
+
+
+
+
+

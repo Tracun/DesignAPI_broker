@@ -1,0 +1,11 @@
+{
+  "apartment": {
+    "id": 1,
+    "type": "Casa",
+    "state": "SP",
+    "city": "Jarinu",
+    "region": "Interior",
+    "value": 100,
+    "brokerId": 100
+  }
+}

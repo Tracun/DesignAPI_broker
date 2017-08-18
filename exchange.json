@@ -1,6 +1,6 @@
 {
-  "main": "prova-01.raml",
-  "name": "Prova-01",
+  "main": "api-broker.raml",
+  "name": "API-Broker",
   "classifier": "raml",
   "tags": []
 }

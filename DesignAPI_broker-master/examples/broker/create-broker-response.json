@@ -1,0 +1,12 @@
+{
+  "broker": {
+    "id": 100,
+    "name": "Olavo",
+    "phone": "11 99999-7777",
+    "businessAddress": "ZZZZZZZZZZZZZZZZZZ",
+    "clientsId": [
+      1,
+      2
+    ]
+  }
+}

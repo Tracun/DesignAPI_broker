@@ -1,0 +1,30 @@
+{
+  "apartments": [
+    {
+      "id": 1,
+      "type": "Casa",
+      "state": "SP",
+      "city": "Jarinu",
+      "region": "Interior",
+      "value": 100,
+      "brokerId": 100
+    },
+    {
+      "id": 2,
+      "type": "Apartamento",
+      "state": "SP",
+      "city": "SP",
+      "region": "Zona Norte",
+      "value": 300,
+      "brokerId": 200
+    }
+  ],
+  "brokers": [
+    {
+      "id": 100,
+      "name": "Olavo",
+      "phone": "11 99999-7777",
+      "businessAddress": "ZZZZZZZZZZZZZZZZZZ"
+    }
+  ]
+}
